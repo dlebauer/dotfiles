@@ -47,8 +47,6 @@
 ;;(require 'essd-bugs)
 ;;(require 'essd-jags)
 
-
-
 ;; To open Transparent Remote file Access
 (require 'tramp)
 (setq tramp-default-method "ssh")
@@ -58,6 +56,26 @@
 (setq x-select-enable-clipboard t)
 (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
 
-;; set ED2IN files to f90 mode
-(add-to-list 'auto-mode-alist '("\\ED2IN\\'" . f90-mode))
+;; windmove
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
 
+
+;; MELPA repository
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+(when (< emacs-major-version 24)
+  ;; For important compatibility libraries like cl-lib
+  (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
+(package-initialize)
+
+;; polymode https://github.com/vitoshka/polymode
+;;
+;;; MARKDOWN
+(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+
+;;; R modes
+(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
