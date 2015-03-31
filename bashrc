@@ -20,5 +20,5 @@ export R_LIBS_USER=${HOME}/R/library
 ##############################################################################
 # Enable colors in "ls" command output
 alias ls="ls -Glah"
-
+alias git-track-all="for remote in `git branch -r`; do git branch --track $remote; done"
 

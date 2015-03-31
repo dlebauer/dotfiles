@@ -9,7 +9,7 @@
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
 files="bashrc emacs gitconfig Rprofile" # list of files/folders to symlink in homedir
-
+scripts="git-track-all find.string"
 ##########
 
 # create dotfiles_old in homedir
@@ -32,3 +32,6 @@ for file in $files; do
 done
 
 
+for script in $scripts; do
+    ln -s $dir/bin/${script}.sh /usr/local/bin/$script
+done
