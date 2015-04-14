@@ -1,12 +1,22 @@
 (set 'temporary-file-directory "/tmp")
 
+;; MELPA repository http://melpa.org/#/getting-started
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://melpa.org/packages/") t)
+(package-initialize) 
+
+;;;; Themes / Settings
 ;; install Monaco http://askubuntu.com/a/333410
 ;; curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash
 (set-default-font "Monaco-14")
 (add-to-list 'default-frame-alist '(font . "Monaco-14"))
+(load-theme 'zenburn t)
 (setq inhibit-splash-screen t) ;; no splash screen
-
 (display-time) ;;display time on modeline
+
+;; resolves 'Error saving to X clipboard manager.'
+(setq x-select-enable-clipboard t)
 
 ;; the following should give fullscreen mode
 (defun fullscreen ()
@@ -20,16 +30,7 @@
   )
 )
 
-
-
 (global-set-key [f11] 'fullscreen)
-
-;; to enable color-theme-select
-;;(add-to-list 'load-path "/usr/share/emacs-snapshot/site-lisp/emacs-goodies-el/color-theme.el")
-;;(require 'color-theme)
-;;(load-file "~/.emacs.d/zenburn.el")
-;;(color-theme-zenburn)
-(load-theme 'zenburn t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -48,27 +49,22 @@
  ;; If there is more than one, they won't work right.
  )
 
+
+;; ESS 
+;; http://stackoverflow.com/a/2710510/199217
 (setq comint-scroll-to-bottom-on-input t)
 ;;(require 'essd-bugs)
 ;;(require 'essd-jags)
 (require 'ess-site)
+
+;; SSH / Tramp
 ;; To open Transparent Remote file Access
 (require 'tramp)
 (setq tramp-default-method "ssh")
 
-;; make emacs use the clipboard
-(setq x-select-enable-clipboard t)
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
-
 ;; windmove
 (when (fboundp 'windmove-default-keybindings)
   (windmove-default-keybindings))
-
-
-;; MELPA repository
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
 
 ;; polymode https://github.com/vitoshka/polymode
 ;;
