@@ -8,8 +8,8 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc gitconfig Rprofile emacs" # list of files/folders to symlink in homedir
-
+files="bashrc emacs gitconfig Rprofile" # list of files/folders to symlink in homedir
+scripts="git-track-all find.string"
 ##########
 
 # create dotfiles_old in homedir
@@ -25,9 +25,13 @@ echo "done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
+    cp -L ~/.$file ~/dotfiles_old/$file`date +%Y-%m-%d`
+    rm ~/.$file
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
 
 
+for script in $scripts; do
+    ln -s $dir/bin/${script}.sh /usr/local/bin/$script
+done
