@@ -26,3 +26,9 @@
        added = yellow
        changed = green
        untracked = cyan
+[core]
+	editor = emacs
+
+[alias]
+	glog = log --graph --topo-order --oneline --decorate
+	dlog = log --graph --date-order --oneline --decorate
