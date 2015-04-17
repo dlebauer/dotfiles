@@ -22,8 +22,9 @@ export PROMPT_COMMAND="history 1 >> ~/history.txt"
 
 # set command prompt
 #PS1="[\u@\h:\W]\$ "
-PS1="\u \W\$ "
-
+#PS1="\u \W\$ "
+source /etc/bash_completion.d/git-prompt
+export PS1='\u \W$(__git_ps1 "(%s)")\$ '
 # set default editor (-nw open in terminal)
 EDITOR="emacs -nw"	
 ##############################################################################
@@ -32,8 +33,8 @@ EDITOR="emacs -nw"
 # Enable colors in "ls" command output
 
 alias ls="ls -Glah"
-
-alias git-track-all="for remote in `git branch -r`; do git branch --track $remote; done"
+alias e="emacs -nw"
+#alias git-track-all="for remote in `git branch -r`; do git branch --track $remote; done"
 
 # added by Anaconda 2.1.0 installer
 export PATH="/home/dlebauer/anaconda/bin:$PATH"
