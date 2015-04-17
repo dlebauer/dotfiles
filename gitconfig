@@ -27,7 +27,7 @@
        changed = green
        untracked = cyan
 [core]
-	editor = emacs
+	editor = "emacs -nw"
 
 [alias]
 	glog = log --graph --topo-order --oneline --decorate
