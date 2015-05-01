@@ -6,7 +6,7 @@
 # Sections:                                                                  #
 #   01. General ................. General Bash behavior                      #
 #   02. Aliases ................. Aliases                                    #
-#   03. Theme/Colors ............ Colors, prompts, fonts, etc.               #
+#   03. Module loading ........... For HPC systems with Modules package      #
 ##############################################################################
 
 ##############################################################################
