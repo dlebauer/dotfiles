@@ -56,4 +56,27 @@ if [ "$HOSTNAME" == "biocluster.igb.illinois.edu" ]; then
   module load gsl
   module load emacs
 fi
->>>>>>> 1a2f3fbbf5834fb26d74e5acdf57bdfb46da709b
+
+if [ "$HOSTNAME" == "ebi-forecast.igb.illinois.edu" ]; then
+  module load nco/4.4.8
+  module load netcdf/4.3.3.1
+  module load parallel-netcdf/1.4.1
+  module load gdal/1.11.2
+  module load udunits/2.1.24
+  module load R/3.1.1
+  module load JAGS
+  module load gsl
+  module load emacs
+fi
+
+if [ "$HOSTNAME" == "ebi-cluster.igb.illinois.edu" ]; then
+  module load nco/4.4.8
+  module load netcdf/4.3.3.1
+  module load parallel-netcdf/1.4.1
+  module load gdal/1.11.2
+  module load udunits/2.1.24
+  module load R/3.1.1
+  module load JAGS
+  module load gsl
+  module load emacs
+fi
