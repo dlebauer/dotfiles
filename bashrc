@@ -22,3 +22,4 @@ export R_LIBS_USER=${HOME}/R/library
 alias ls="ls -Glah"
 alias git-track-all="for remote in `git branch -r`; do git branch --track $remote; done"
 
+export R_LIBS_USER=~/R/library
