@@ -23,8 +23,12 @@ export PROMPT_COMMAND="history 1 >> ~/history.txt"
 # set command prompt
 #PS1="[\u@\h:\W]\$ "
 #PS1="\u \W\$ "
-source /etc/bash_completion.d/git-prompt
-export PS1='\u \W$(__git_ps1 "(%s)")\$ '
+if [ -f /etc/bash_completion.d/git-prompt ]; then
+   source /etc/bash_completion.d/git-prompt
+   export PS1='\u@\h \W$(__git_ps1 "(%s)")\$ '
+else 
+   export PS1="[\u@\h:\W]\$ "
+fi
 # set default editor (-nw open in terminal)
 EDITOR="emacs -nw"	
 ##############################################################################
@@ -43,40 +47,18 @@ export R_LIBS_USER=~/R/library
 
 
 ##############################################################################
-# 03. Modules                                                                #
+# 03. Servers with Modules
 ##############################################################################
-if [ "$HOSTNAME" == "biocluster.igb.illinois.edu" ]; then
-  module load nco/4.4.8
-  module load netcdf/4.3.3.1
-  module load parallel-netcdf/1.4.1
-  module load gdal/1.11.2
-  module load udunits/2.1.24
-  module load R/3.1.1
-  module load JAGS
-  module load gsl
-  module load emacs
-fi
-
-if [ "$HOSTNAME" == "ebi-forecast.igb.illinois.edu" ]; then
-  module load nco/4.4.8
-  module load netcdf/4.3.3.1
-  module load parallel-netcdf/1.4.1
-  module load gdal/1.11.2
-  module load udunits/2.1.24
-  module load R/3.1.1
-  module load JAGS
-  module load gsl
-  module load emacs
-fi
-
-if [ "$HOSTNAME" == "ebi-cluster.igb.illinois.edu" ]; then
-  module load nco/4.4.8
-  module load netcdf/4.3.3.1
-  module load parallel-netcdf/1.4.1
-  module load gdal/1.11.2
-  module load udunits/2.1.24
-  module load R/3.1.1
-  module load JAGS
-  module load gsl
-  module load emacs
-fi
+for myhostname in "biocluster.igb.illinois.edu" "ebi-forecast.igb.illinois.edu" "ebi-cluster.igb.illinois.edu"; do
+    if [ "$HOSTNAME" == $myhostname ]; then
+      module load nco/4.4.8
+      module load netcdf/4.3.3.1
+      module load parallel-netcdf/1.4.1
+      module load gdal/1.11.2
+      module load udunits/2.1.24
+      module load R/3.1.1
+      module load JAGS
+      module load gsl
+      module load emacs
+    fi
+done
