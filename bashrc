@@ -49,7 +49,7 @@ export R_LIBS_USER=~/R/library
 ##############################################################################
 # 03. Servers with Modules
 ##############################################################################
-for myhostname in "biocluster.igb.illinois.edu" "ebi-forecast.igb.illinois.edu" "ebi-cluster.igb.illinois.edu"; do
+for myhostname in "biocluster.igb.illinois.edu" "ebi-cluster.igb.illinois.edu"; do
     if [ "$HOSTNAME" == $myhostname ]; then
       module load nco/4.4.8
       module load netcdf/4.3.3.1
@@ -62,3 +62,10 @@ for myhostname in "biocluster.igb.illinois.edu" "ebi-forecast.igb.illinois.edu" 
       module load emacs
     fi
 done
+
+if [ "$HOSTNAME" ==  "ebi-forecast.igb.illinois.edu" ] 
+      module load netcdf/4.1.3
+      module load gdal/1.9.2
+      module load udunits/2.1.24
+      module load R/3.1.0
+fi
