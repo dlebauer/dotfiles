@@ -63,7 +63,7 @@ for myhostname in "biocluster.igb.illinois.edu" "ebi-cluster.igb.illinois.edu"; 
     fi
 done
 
-if [ "$HOSTNAME" ==  "ebi-forecast.igb.illinois.edu" ] 
+if [ "$HOSTNAME" ==  "ebi-forecast.igb.illinois.edu" ]; then
       module load netcdf/4.1.3
       module load gdal/1.9.2
       module load udunits/2.1.24
