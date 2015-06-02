@@ -1,0 +1,59 @@
+Host fx forecast ebi-forecast ebi-forecast.igb.illinois.edu
+HostName ebi-forecast.igb.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/ebi-forecast.igb.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+ForwardX11 yes
+
+Host cx cluster ebi-cluster ebi-cluster.igb.illinois.edu
+HostName ebi-cluster.igb.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/ebi-cluster.igb.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+ForwardX11 yes
+
+Host pecandev pecandev.igb.illinois.edu pecandev.igb.uiuc.edu
+HostName pecandev.igb.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/pecandev.igb.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+ForwardX11 yes
+
+Host biocluster biocluster.igb.illinois.edu
+HostName biocluster.igb.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/biocluster.igb.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+ForwardX11 yes
+Host ebi-cluster.igb.illinois.edu
+HostName ebi-cluster.igb.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/ebi-cluster.igb.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+
+Host roger roger-login.ncsa.illinois.edu
+HostName roger-login.ncsa.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/roger-login.ncsa.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+
+Host dlebauer dlebauer.igb.illinois.edu
+HostName dlebauer.igb.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/dlebauer.igb.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+ForwardX11 yes
