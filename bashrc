@@ -34,8 +34,5 @@ EDITOR="emacs -nw"
 # Enable colors in "ls" command output
 
 alias ls="ls -Glah"
-alias e="emacs -nw"
+alias emacs="emacs -nw"
 #alias git-track-all="for remote in `git branch -r`; do git branch --track $remote; done"
-
-# added by Anaconda 2.1.0 installer
-export PATH="/home/dlebauer/anaconda/bin:$PATH"
