@@ -78,3 +78,16 @@
 (add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
 (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
+
+;;;;;;;;;;;;;;;
+;;Writing Modes
+;;;;;;;;;;;;;;;
+(add-hook 'text-mode-hook (lambda ()
+   (progn
+     ;; Spelling
+     (flyspell-mode t)
+     ;; Grammar
+     (require 'langtool)
+     (setq langtool-language-tool-jar "~/.emacs.d/LanguageTool-2.9/languagetool.jar")
+     (setq langtool-mother-tongue "en")
+)))

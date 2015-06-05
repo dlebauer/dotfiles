@@ -17,8 +17,7 @@ export R_LIBS_USER=${HOME}/R/library
 
 # store all commands in history.txt
 # http://software-carpentry.org/blog/2015/02/instructor-debriefing-2015-02-10.html#comment-1858667184
-
-export PROMPT_COMMAND="history 1 >> ~/history.txt"
+#export PROMPT_COMMAND="history 1 >> ~/history.txt"
 
 # set command prompt
 #PS1="[\u@\h:\W]\$ "
