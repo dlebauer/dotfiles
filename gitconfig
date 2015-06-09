@@ -32,5 +32,7 @@
 [alias]
 	glog = log --graph --topo-order --oneline --decorate
 	dlog = log --graph --date-order --oneline --decorate
+	dif =  diff --word-diff --color-words
+
 [core]
 	pager = less -+S
