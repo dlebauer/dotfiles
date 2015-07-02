@@ -16,7 +16,7 @@ module purge
 
 for myhostname in "biocluster.igb.illinois.edu" "ebi-cluster.igb.illinois.edu"; do
     if [[ "$HOSTNAME" == $myhostname || "$PBS_O_HOST" == $myhostname ]] ; then
-      module load nco/4.4.8 netcdf/4.3.3.1 gdal/1.11.2 udunits/2.1.24 R/3.1.1 JAGS gsl emacs
+      module load libxml2/2.9.1 nco/4.4.8 netcdf/4.3.3.1 gdal/1.11.2 udunits/2.1.24 R/3.1.1 JAGS gsl emacs
     fi
 done
 
