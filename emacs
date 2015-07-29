@@ -6,6 +6,7 @@
              '("melpa-stable" . "http://melpa.org/packages/") t)
 (package-initialize) 
 
+
 ;;;; Themes / Settings
 ;; install Monaco http://askubuntu.com/a/333410
 ;; curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash
@@ -92,3 +93,12 @@
      (setq langtool-language-tool-jar "~/.emacs.d/LanguageTool-2.9/languagetool.jar")
      (setq langtool-mother-tongue "en")
 )))
+
+;;;;;;;;;;
+;;Remap keys on mac
+;;;;;;;;;
+
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
