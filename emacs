@@ -6,7 +6,6 @@
              '("melpa-stable" . "http://melpa.org/packages/") t)
 (package-initialize) 
 
-
 ;;;; Themes / Settings
 ;; install Monaco http://askubuntu.com/a/333410
 ;; curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash

@@ -58,3 +58,18 @@ IdentityFile ~/.ssh/141.142.204.139
 ServerAliveInterval 300
 ControlMaster auto 
 ControlPath /tmp/%r@%h:%p
+Host yepecan 52.25.165.223
+HostName 52.25.165.223
+User carya
+IdentityFile ~/.ssh/52.25.165.223
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+
+Host roger-login.ncsa.illinois.edu
+HostName roger-login.ncsa.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/roger-login.ncsa.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p

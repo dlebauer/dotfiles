@@ -1,6 +1,6 @@
 .First <- function() {
   options(
-    repos = c(CRAN = "http://cran.rstudio.com/")
+    repos = c(CRAN = "https://cran.rstudio.com/")
 #    browserNLdisabled = TRUE#,
 #    error = browser,
 #    deparse.max.lines = 2
