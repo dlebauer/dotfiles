@@ -9,10 +9,6 @@ export R_LIBS_USER=${HOME}/R/library
 
 # MODULES
 
-## clear defaults
-
-module purge
-
 ## Loading modules
 
 for myhostname in "biocluster.igb.illinois.edu" "ebi-cluster.igb.illinois.edu"; do
@@ -29,3 +25,13 @@ fi
 if [[ "$HOSTNAME" ==  "cg-gpu01" ]] || [[ "$PBS_O_HOST" == "cg-gpu01" ]]; then
       module load zlib hdf5 netcdf4 udunits R libxml2
 fi
+
+
+## Mac
+
+if [ "$TERM_PROGRAM" == "Apple_Terminal" ]; then
+# if [ "$HOSTNAME" == "Davids-MacBook-Pro.local" ]; then
+  export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+fi
+# added by Anaconda 2.3.0 installer
+export PATH="/Users/dlebauer/anaconda/bin:$PATH"

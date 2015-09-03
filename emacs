@@ -92,3 +92,12 @@
      (setq langtool-language-tool-jar "~/.emacs.d/LanguageTool-2.9/languagetool.jar")
      (setq langtool-mother-tongue "en")
 )))
+
+;;;;;;;;;;
+;;Remap keys on mac
+;;;;;;;;;
+
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
+(setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
