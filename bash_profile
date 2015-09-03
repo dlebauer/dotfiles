@@ -22,7 +22,7 @@ for myhostname in "biocluster.igb.illinois.edu" "ebi-cluster.igb.illinois.edu"; 
 done
 
 if [ "$HOSTNAME" ==  "ebi-forecast.igb.illinois.edu" ]; then
-      module load netcdf/4.1.3 gdal/1.9.2 udunits/2.1.24 R/3.1.0
+      module load netcdf/4.1.3 gdal/1.9.2 libxml2/2.9.1 udunits/2.1.24 R/3.1.0
 fi
 
 ## for roger.ncsa.illinois.edu
