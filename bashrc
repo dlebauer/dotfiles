@@ -1,4 +1,4 @@
-
+eval "$(docker-machine env default)"
 
 ##############################################################################
 #   Filename: .bashrc                                                        #
@@ -30,13 +30,23 @@ if [ -f /etc/bash_completion.d/git-prompt ]; then
 else 
    export PS1="[\W]\$ "
 fi
+
 # set default editor (-nw open in terminal)
-EDITOR="emacs -nw"	
+EDITOR="\emacs -nw"
+
+# use rbenv to install gems locally
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
 ##############################################################################
 # 02. Aliases                                                                #
 ##############################################################################
 # Enable colors in "ls" command output
 
 alias ls="ls -Glah"
-alias emacs="emacs -nw"
-#alias git-track-all="for remote in `git branch -r`; do git branch --track $remote; done"
+if [ "$TERM_PROGRAM" == "Apple_Terminal" ]
+then
+   alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs"
+else
+   alias emacs="emacs -nw"
+fi
+
