@@ -1,7 +1,9 @@
 source ~/.bashrc
 # User specific environment and startup programs
 
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/bin:$HOME/.gem/ruby/2.0.0/bin 
+#.gem/ruby from http://stackoverflow.com/a/18294746/199217
+# gem install --user-install
 
 # Set default R Library
 
@@ -32,6 +34,7 @@ fi
 if [ "$TERM_PROGRAM" == "Apple_Terminal" ]; then
 # if [ "$HOSTNAME" == "Davids-MacBook-Pro.local" ]; then
   export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+  export DYLD_FALLBACK_LIBRARY_PATH=$HOME/anaconda/lib/:$DYLD_FALLBACK_LIBRARY_PATH
 fi
 # added by Anaconda 2.3.0 installer
 export PATH="/Users/dlebauer/anaconda/bin:$PATH"
