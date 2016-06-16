@@ -73,3 +73,36 @@ IdentityFile ~/.ssh/roger-login.ncsa.illinois.edu
 ServerAliveInterval 300
 ControlMaster auto 
 ControlPath /tmp/%r@%h:%p
+
+Host pecandev.igb.illinois.edu
+HostName pecandev.igb.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/pecandev.igb.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+
+Host bms cardinal.cyverse.org
+HostName cardinal.cyverse.org
+User dlebauer
+IdentityFile ~/.ssh/cardinal.cyverse.org
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+Port 1657
+
+Host localhost
+HostName localhost
+User carya
+IdentityFile ~/.ssh/localhost
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+
+Host bety7 bety7.ncsa.illinois.edu
+HostName bety7.ncsa.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/bety7.ncsa.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
