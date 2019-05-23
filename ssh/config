@@ -25,51 +25,10 @@ ControlMaster auto
 ControlPath /tmp/%r@%h:%p
 ForwardX11 yes
 
-Host roger roger-login.ncsa.illinois.edu
-HostName roger-login.ncsa.illinois.edu
-User dlebauer
-IdentityFile ~/.ssh/roger-login.ncsa.illinois.edu
-ServerAliveInterval 300
-ControlMaster auto 
-ControlPath /tmp/%r@%h:%p
-
-Host dlebauer dlebauer.igb.illinois.edu
-HostName dlebauer.igb.illinois.edu
-User dlebauer
-IdentityFile ~/.ssh/dlebauer.igb.illinois.edu
-ServerAliveInterval 300
-ControlMaster auto 
-ControlPath /tmp/%r@%h:%p
-ForwardX11 yes
-
 Host apollo apollo.ddpsc.org
 HostName apollo.ddpsc.org
 User dlebauer
 IdentityFile ~/.ssh/apollo.ddpsc.org
-ServerAliveInterval 300
-ControlMaster auto 
-ControlPath /tmp/%r@%h:%p
-
-Host yepecan 52.25.165.223
-HostName 52.25.165.223
-User carya
-IdentityFile ~/.ssh/52.25.165.223
-ServerAliveInterval 300
-ControlMaster auto 
-ControlPath /tmp/%r@%h:%p
-
-Host roger-login.ncsa.illinois.edu
-HostName roger-login.ncsa.illinois.edu
-User dlebauer
-IdentityFile ~/.ssh/roger-login.ncsa.illinois.edu
-ServerAliveInterval 300
-ControlMaster auto 
-ControlPath /tmp/%r@%h:%p
-
-Host pecandev.igb.illinois.edu
-HostName pecandev.igb.illinois.edu
-User dlebauer
-IdentityFile ~/.ssh/pecandev.igb.illinois.edu
 ServerAliveInterval 300
 ControlMaster auto 
 ControlPath /tmp/%r@%h:%p
@@ -83,15 +42,6 @@ ControlMaster auto
 ControlPath /tmp/%r@%h:%p
 Port 1657
 
-Host localhost
-HostName localhost
-User carya
-IdentityFile ~/.ssh/localhost
-ServerAliveInterval 300
-ControlMaster auto 
-ControlPath /tmp/%r@%h:%p
-NoHostAuthenticationForLocalhost yes
-
 Host bety7 bety7.ncsa.illinois.edu
 HostName bety7.ncsa.illinois.edu
 User dlebauer
@@ -100,3 +50,35 @@ ServerAliveInterval 300
 ControlMaster auto 
 ControlPath /tmp/%r@%h:%p
 
+Host cyverse-openstack
+HostName cyverse-openstack
+User dlebauer
+IdentityFile ~/.ssh/cyverse-openstack
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+
+Host uav  172.16.6.207
+HostName 172.16.6.207
+User dlebauer
+IdentityFile ~/.ssh/cyverse-openstack
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+
+Host welsch.cyverse.org
+HostName welsch.cyverse.org
+User dlebauer
+IdentityFile ~/.ssh/welsch.cyverse.org
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
+Port 1657
+
+Host bety6.ncsa.illinois.edu
+HostName bety6.ncsa.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/bety6.ncsa.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p

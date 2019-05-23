@@ -9,7 +9,7 @@
 ;;;; Themes / Settings
 ;; install Monaco http://askubuntu.com/a/333410
 ;; curl -kL https://raw.github.com/cstrap/monaco-font/master/install-font-ubuntu.sh | bash
-(set-default-font "Monaco-14")
+(set-default-font "Monaco-16")
 (add-to-list 'default-frame-alist '(font . "Monaco-14"))
 (load-theme 'zenburn t)
 (setq inhibit-splash-screen t) ;; no splash screen
@@ -79,6 +79,11 @@
 (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
 (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 (add-to-list 'auto-mode-alist '("\\.Rscript" . r-mode))
+
+;;; YAML Mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 ;;;;;;;;;;;;;;;
 ;;Writing Modes

@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc emacs gitconfig bash_profile Rprofile ssh/config" # list of files/folders to symlink in homedir
+files="bashrc emacs gitconfig bash_profile Rprofile Renviron ssh/config" # list of files/folders to symlink in homedir
 scripts="git-track-all find.string"
 ##########
 

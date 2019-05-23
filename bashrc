@@ -1,5 +1,3 @@
-eval "$(docker-machine env default)"
-
 ##############################################################################
 #   Filename: .bashrc                                                        #
 #                                                                            #
@@ -11,6 +9,10 @@ eval "$(docker-machine env default)"
 ##############################################################################
 # 01. General                                                                #
 ##############################################################################
+# set history to infinite
+export HISTTIMEFORMAT="%y-%m-%d %T "
+export HISTSIZE=
+export HISTFILESIZE=
 
 # store all commands in history.txt
 # http://software-carpentry.org/blog/2015/02/instructor-debriefing-2015-02-10.html#comment-1858667184
