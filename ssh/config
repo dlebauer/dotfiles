@@ -82,3 +82,11 @@ IdentityFile ~/.ssh/bety6.ncsa.illinois.edu
 ServerAliveInterval 300
 ControlMaster auto 
 ControlPath /tmp/%r@%h:%p
+
+Host ebi-forecast.igb.illinois.edu
+HostName ebi-forecast.igb.illinois.edu
+User dlebauer
+IdentityFile ~/.ssh/ebi-forecast.igb.illinois.edu
+ServerAliveInterval 300
+ControlMaster auto 
+ControlPath /tmp/%r@%h:%p
