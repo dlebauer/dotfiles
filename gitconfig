@@ -27,7 +27,7 @@
        changed = green
        untracked = cyan
 [core]
-	editor = "emacs -nw"
+	editor = nano
 
 [alias]
 	glog = log --graph --topo-order --oneline --decorate
@@ -37,6 +37,7 @@
 [core]
 	pager = less -+S
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
